@@ -1,0 +1,320 @@
+---
+const { title } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="font-sans antialiased h-full flex flex-col">
+		<div class="flex flex-col h-full">
+			<header class="Header-module__LPAsUa__header">
+				<nav class="max-w-[1210px] mx-auto px-2.5" aria-label="Main navigation">
+					<div class="hidden md:flex items-center justify-between h-[60px] gap-4">
+						<div class="flex items-center flex-1">
+							<a class="flex items-center" aria-label="ASIO Home" href="/">
+								<img alt="ASIO Logo" width="110" height="42" decoding="async" data-nimg="1" class="w-[110px] h-auto" style="color:transparent" src="/asio-logo.svg">
+							</a>
+						</div>
+						<ul class="hidden md:flex items-center gap-[32px] justify-center list-none m-0 p-0">
+							<li><a class="text-[#000000] hover:opacity-80 transition-opacity Header-module__LPAsUa__navLink" href="/vibe">Vibe</a></li>
+							<li><a class="text-[#000000] hover:opacity-80 transition-opacity Header-module__LPAsUa__navLink" href="/mastery">Mastery</a></li>
+							<li><a class="text-[#000000] hover:opacity-80 transition-opacity Header-module__LPAsUa__navLink" href="/bank">Bank</a></li>
+						</ul>
+						<div class="flex items-center gap-3 flex-1 justify-end">
+							<div class="LanguageSwitcher-module__qMUcBq__container">
+								<button class="LanguageSwitcher-module__qMUcBq__button" aria-label="Switch language" aria-expanded="false" aria-haspopup="true">
+									<span class="LanguageSwitcher-module__qMUcBq__flag"></span>
+									<span class="LanguageSwitcher-module__qMUcBq__currentLocale">English</span>
+									<svg class="LanguageSwitcher-module__qMUcBq__chevron " width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+									</svg>
+								</button>
+							</div>
+							<menu class="hidden md:flex items-center gap-3 list-none m-0 p-0">
+								<li><a href="https://app.asiomarketing.com/login" class="flex items-center justify-center text-black Header-module__LPAsUa__actionButton" target="_blank" rel="noopener noreferrer">Login</a></li>
+								<li><a href="https://app.asiomarketing.com/login" class="flex items-center justify-center text-black Header-module__LPAsUa__actionButton" target="_blank" rel="noopener noreferrer">Sign Up</a></li>
+							</menu>
+						</div>
+					</div>
+					<div class="md:hidden flex items-center justify-between h-[60px] w-full">
+						<a class="flex items-center" aria-label="ASIO Home" href="/">
+							<img alt="ASIO Logo" width="85" height="28" decoding="async" data-nimg="1" class="w-[85px] h-[28px]" style="color:transparent" src="/asio-logo.svg">
+						</a>
+						<button class="p-2 rounded-md text-black hover:bg-gray-100 transition-colors" aria-label="Toggle menu">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu h-6 w-6" aria-hidden="true">
+								<path d="M4 5h16"></path>
+								<path d="M4 12h16"></path>
+								<path d="M4 19h16"></path>
+							</svg>
+						</button>
+					</div>
+				</nav>
+			</header>
+			<main class="flex-1 flex flex-col items-center">
+				<slot />
+			</main>
+			<footer class="mt-10 w-full shrink-0 Footer-module__WOZ5Ra__footer bg-white">
+				<div class="Footer-module__WOZ5Ra__footerBottom"></div>
+				<div class="max-w-[1210px] mx-auto px-2.5 pt-8 md:pt-12">
+					<div class="mb-[47px] md:mb-8 flex justify-center md:justify-start">
+						<img alt="ASIO Logo" width="85" height="28" decoding="async" data-nimg="1" class="w-[85px] h-auto " style="color:transparent" src="/asio-logo.svg">
+					</div>
+					<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-8">
+						<div>
+							<h3 class="mb-4 font-medium text-[18px] leading-6 text-black">About</h3>
+							<ul class="space-y-2">
+								<li><a class="hover:text-gray-600 transition-colors font-light text-base leading-6 text-black" href="/vibe">Vibe</a></li>
+								<li><a class="hover:text-gray-600 transition-colors font-light text-base leading-6 text-black" href="/mastery">Mastery</a></li>
+								<li><a class="hover:text-gray-600 transition-colors font-light text-base leading-6 text-black" href="/bank">Bank &amp; Wallet</a></li>
+							</ul>
+						</div>
+						<div>
+							<h3 class="mb-4 font-medium text-[18px] leading-6 text-black">Partners</h3>
+							<ul class="space-y-2">
+								<li><a class="hover:text-gray-600 transition-colors font-light text-base leading-6 text-black" href="/partners">Become a Partner</a></li>
+								<li><a class="hover:text-gray-600 transition-colors font-light text-base leading-6 text-black" href="/affiliate">Affiliate Program</a></li>
+								<li><a class="hover:text-gray-600 transition-colors font-light text-base leading-6 text-black" href="/webinars">Webinars - Community</a></li>
+							</ul>
+						</div>
+						<div>
+							<h3 class="mb-4 font-medium text-[18px] leading-6 text-black">Resources</h3>
+							<ul class="space-y-2">
+								<li><a class="hover:text-gray-600 transition-colors font-light text-base leading-6 text-black" href="/blog">Blogs and insights</a></li>
+							</ul>
+						</div>
+						<div>
+							<h3 class="mb-4 font-medium text-[18px] leading-6 text-black">Help center</h3>
+							<ul class="space-y-2">
+								<li><a class="hover:text-gray-600 transition-colors font-light text-base leading-6 text-black" href="/support#faqs">FAQs</a></li>
+								<li><a class="hover:text-gray-600 transition-colors font-light text-base leading-6 text-black" href="/support#billing-payments">Billing &amp; Payments</a></li>
+								<li><a class="hover:text-gray-600 transition-colors font-light text-base leading-6 text-black" href="/support#account-settings">Account &amp; Settings</a></li>
+								<li><a class="hover:text-gray-600 transition-colors font-light text-base leading-6 text-black" href="/support#technical-support">Technical Support</a></li>
+							</ul>
+						</div>
+						<div>
+							<h3 class="mb-4 font-medium text-[18px] leading-6 text-black">Contact Us</h3>
+							<ul class="space-y-2">
+								<li><a class="hover:text-gray-600 transition-colors font-light text-base leading-6 text-black" href="/contact#sales-inquiries">Sales Inquiries</a></li>
+								<li><a class="hover:text-gray-600 transition-colors font-light text-base leading-6 text-black" href="/contact#customer-support">Customer Support</a></li>
+								<li><a class="hover:text-gray-600 transition-colors font-light text-base leading-6 text-black" href="/contact#media-pr">Media &amp; PR</a></li>
+								<li><a class="hover:text-gray-600 transition-colors font-light text-base leading-6 text-black" href="/contact#office-locations">Office Locations</a></li>
+							</ul>
+						</div>
+						<div>
+							<h3 class="mb-4 font-medium text-[18px] leading-6 text-black">Legal</h3>
+							<ul class="space-y-2">
+								<li><a class="hover:text-gray-600 transition-colors font-light text-base leading-6 text-black" href="/terms-and-conditions#terms">Terms &amp; Conditions</a></li>
+								<li><a class="hover:text-gray-600 transition-colors font-light text-base leading-6 text-black" href="/terms-and-conditions#disclaimer">Disclaimer</a></li>
+								<li><a class="hover:text-gray-600 transition-colors font-light text-base leading-6 text-black" href="/privacy">Privacy Policy</a></li>
+								<li><a class="hover:text-gray-600 transition-colors font-light text-base leading-6 text-black" href="/terms-and-conditions#finance">Finance &amp; Credit Policies</a></li>
+								<li><a class="hover:text-gray-600 transition-colors font-light text-base leading-6 text-black" href="/terms-and-conditions#mastery">ASIO Mastery policies</a></li>
+								<li><a class="hover:text-gray-600 transition-colors font-light text-base leading-6 text-black" href="/terms-and-conditions#cookies">Cookie Policy</a></li>
+								<li><a class="hover:text-gray-600 transition-colors font-light text-base leading-6 text-black" href="/terms-and-conditions#security">Security &amp; Compliance</a></li>
+								<li><button class="hover:text-gray-600 transition-colors font-light text-base leading-6 text-black text-left" type="button">Cookie Preferences</button></li>
+							</ul>
+						</div>
+					</div>
+					<div class="flex justify-between pt-5 pb-5 md:flex-row md:items-center md:pt-8 md:pb-8 
+            Footer-module__WOZ5Ra__bottomSection">
+						<p class="font-normal text-sm leading-[17px] text-black">© 2025 ASIO. All rights reserved.</p>
+						<div class="flex items-center gap-4">
+							<a href="https://www.instagram.com/asiomkt/" target="_blank" rel="noopener noreferrer" class="cursor-pointer hover:opacity-70 transition-opacity" aria-label="Instagram"><img alt="Instagram" loading="lazy" width="17" height="17" decoding="async" data-nimg="1" class="" style="color:transparent" src="/instagram.svg"></a>
+							<a href="https://www.facebook.com/profile.php?id=61572877784257" target="_blank" rel="noopener noreferrer" class="cursor-pointer hover:opacity-70 transition-opacity" aria-label="Facebook"><img alt="Facebook" loading="lazy" width="17" height="17" decoding="async" data-nimg="1" class="" style="color:transparent" src="/facebook.png"></a>
+							<a href="https://x.com/ASIOoficial?s=20" target="_blank" rel="noopener noreferrer" class="cursor-pointer hover:opacity-70 transition-opacity" aria-label="X"><img alt="X" loading="lazy" width="17" height="17" decoding="async" data-nimg="1" class="" style="color:transparent" src="/x-twitter.svg"></a>
+							<a href="https://www.tiktok.com/@asiooficial" target="_blank" rel="noopener noreferrer" class="cursor-pointer hover:opacity-70 transition-opacity" aria-label="TikTok"><img alt="TikTok" loading="lazy" width="17" height="17" decoding="async" data-nimg="1" class="" style="color:transparent" src="/tiktok.svg"></a>
+							<a href="https://www.youtube.com/@AsioMarketing" target="_blank" rel="noopener noreferrer" class="cursor-pointer hover:opacity-70 transition-opacity" aria-label="YouTube"><img alt="YouTube" loading="lazy" width="17" height="17" decoding="async" data-nimg="1" class="" style="color:transparent" src="/youtube.svg"></a>
+							<a href="https://www.threads.com/@asiomkt" target="_blank" rel="noopener noreferrer" class="cursor-pointer hover:opacity-70 transition-opacity" aria-label="Threads"><img alt="Threads" loading="lazy" width="17" height="17" decoding="async" data-nimg="1" class="" style="color:transparent" src="/threads.svg"></a>
+							<a href="https://www.linkedin.com/company/asio-marketing" target="_blank" rel="noopener noreferrer" class="cursor-pointer hover:opacity-70 transition-opacity" aria-label="LinkedIn"><img alt="LinkedIn" loading="lazy" width="17" height="17" decoding="async" data-nimg="1" class="" style="color:transparent" src="/linkedin.svg"></a>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
+<style>
+	@keyframes scroll {
+		0% {
+			transform: translate(0);
+		}
+		to {
+			transform: translate(-50%);
+		}
+	}
+	.animate-scroll {
+		will-change: transform;
+		width: -moz-fit-content;
+		width: fit-content;
+		animation: 60s linear infinite scroll;
+		display: flex;
+	}
+	@keyframes slide-down {
+		0% {
+			transform: translateY(-100%);
+		}
+		to {
+			transform: translateY(0);
+		}
+	}
+	@keyframes slide-up {
+		0% {
+			transform: translateY(0);
+		}
+		to {
+			transform: translateY(-100%);
+		}
+	}
+	@keyframes slide-up-banner {
+		0% {
+			opacity: 0;
+			transform: translateY(100%);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+	.menu-slide-down {
+		animation: 0.3s ease-out slide-down;
+	}
+	.menu-slide-up {
+		animation: 0.3s ease-out slide-up;
+	}
+	.animate-slide-up {
+		animation: 0.4s ease-out slide-up-banner;
+	}
+	.scrollbar-hide::-webkit-scrollbar {
+		display: none;
+	}
+	.scrollbar-hide {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+	.animate-bounce-gift {
+		animation: 2s ease-in-out infinite giftBounce;
+	}
+	@keyframes giftBounce {
+		0%,
+		to {
+			transform: translateY(0);
+		}
+		25% {
+			transform: translateY(-4px);
+		}
+		50% {
+			transform: translateY(0);
+		}
+		75% {
+			transform: translateY(-2px);
+		}
+	}
+</style>
+<style>
+	.Header-module__LPAsUa__header {
+		-webkit-backdrop-filter: blur(2.5px);
+		backdrop-filter: blur(2.5px);
+		z-index: 10;
+		background: #ffffff21;
+		flex-shrink: 0;
+		width: 100%;
+		height: 60px;
+		position: fixed;
+		top: 0;
+		box-shadow:
+			0 0.681695px 2.04509px -1px #0000000f,
+			0 1.85644px 5.56931px -2px #0000000f,
+			0 4.07607px 12.2282px -3px #0000000d,
+			0 9.04793px 27.1438px -4px #0000000a;
+	}
+	.Header-module__LPAsUa__headerTransparent {
+		-webkit-backdrop-filter: blur(2.5px);
+		backdrop-filter: blur(2.5px);
+		z-index: 10;
+		background: 0 0;
+		flex-shrink: 0;
+		width: 100%;
+		height: 60px;
+		position: fixed;
+		top: 0;
+	}
+	.Header-module__LPAsUa__bankHeader {
+		z-index: 10;
+		-webkit-backdrop-filter: blur(2.5px);
+		backdrop-filter: blur(2.5px);
+		background:
+			linear-gradient(#b69eff 0% 100%),
+			linear-gradient(90deg, #fff -18.21%, #601d77 39.68%, #532095 100%);
+		flex-shrink: 0;
+		width: 100%;
+		height: 60px;
+		position: fixed;
+		top: 0;
+		box-shadow:
+			0 0.682px 2.045px -1px #0000000f,
+			0 1.856px 5.569px -2px #0000000f,
+			0 4.076px 12.228px -3px #0000000d,
+			0 9.048px 27.144px -4px #0000000a;
+	}
+	.Header-module__LPAsUa__navLink {
+		color: #000;
+		font-size: 18px;
+		font-weight: 510;
+		line-height: 20px;
+	}
+	.Header-module__LPAsUa__bankNavLink {
+		color: #000;
+		width: 32px;
+		height: 14px;
+		font-family:
+			SF Pro,
+			sans-serif;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 510;
+		line-height: 17px;
+	}
+	.Header-module__LPAsUa__actionButton {
+		outline-offset: -1px;
+		color: #000;
+		background: #00000005;
+		border: 1px solid #ebebeb;
+		border-radius: 36px;
+		outline: 1px solid #ebebeb;
+		padding: 8px 18px;
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 20px;
+		box-shadow:
+			7px 7px 4px #94949405,
+			4px 4px 3px #94949412,
+			2px 2px 2px #9494941c,
+			0 0 1px #94949421;
+	}
+	.Header-module__LPAsUa__bankActionButton {
+		color: #000;
+		background: #00000005;
+		border: 1px solid #ebebeb;
+		border-radius: 36px;
+		padding: 8px 18px;
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 20px;
+		box-shadow:
+			inset 10px 12px 4px #ffffff03,
+			inset 6px 7px 4px #ffffff14,
+			inset 4px 4px 3px #ffffff45,
+			inset 2px 2px 2px #ffffff73,
+			inset 0 0 1px #ffffff85;
+	}
+	.Header-module__LPAsUa__mobileNavLink {
+		font-size: 14px;
+		font-weight: 510;
+		line-height: 17px;
+	}
+</style>
