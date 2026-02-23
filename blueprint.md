@@ -81,10 +81,24 @@ La migración se dividirá en 3 sprints principales:
 
 ---
 
-## 8. Plan y Pasos para la Solicitud Actual
+## 8. Plan y Pasos para la Solicitud Actual: Interconectar Nodos Back y Front
 
-La solicitud actual es verificar cada commit, avance, archivo y fragmento realizado. Para cumplirla se seguirá este flujo mínimo:
+### Objetivo
 
-1. Revisar el historial reciente y los artefactos generados para confirmar que el build (`npm run build`) y los assets siguen siendo válidos.
-2. Documentar en este blueprint los archivos y fragmentos tocados por cada entrega y los checks aplicados (build/QA manual).
-3. Mantener el checklist de verificación por cambio en curso y actualizarlo en cada commit futuro.
+Conectar un **nodo back-end** (endpoint de API) con un **nodo front-end** (isla React interactiva) dentro de la arquitectura de Astro.
+
+### Archivos Creados / Modificados
+
+| Archivo | Rol |
+| :--- | :--- |
+| `src/pages/api/stats.ts` | **Nodo back-end**: API Route de Astro que devuelve estadísticas de campaña en JSON. |
+| `src/components/react/StatsWidget.tsx` | **Nodo front-end**: Isla React con `client:load` que hace `fetch('/api/stats')` y renderiza los datos. |
+| `src/pages/index.astro` | Monta el `StatsWidget` con `client:load` para hidratar la isla en el cliente. |
+| `src/styles/global.css` | Añade estilos para la cuadrícula de estadísticas (`.stats-grid`, `.stat-card`, etc.). |
+| `blueprint.md` | Actualizado con este plan. |
+
+### Pasos de Verificación
+
+1. `npm run build` sin errores.
+2. Vista previa en navegador: el panel muestra 4 tarjetas con datos (Visitas, Leads, Conversiones, Ingresos).
+3. DevTools → Network: solicitud `GET /api/stats` retorna `200 OK` con JSON válido.
