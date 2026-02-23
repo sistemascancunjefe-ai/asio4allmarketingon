@@ -88,3 +88,18 @@ La solicitud actual es verificar cada commit, avance, archivo y fragmento realiz
 1. Revisar el historial reciente y los artefactos generados para confirmar que el build (`npm run build`) y los assets siguen siendo válidos.
 2. Documentar en este blueprint los archivos y fragmentos tocados por cada entrega y los checks aplicados (build/QA manual).
 3. Mantener el checklist de verificación por cambio en curso y actualizarlo en cada commit futuro.
+
+## 9. Estado actual del proyecto Astro
+
+- Páginas: `src/pages/index.astro` usa `Layout` para un placeholder de inicio.
+- Layout: `src/layouts/Layout.astro` define navegación básica, pie y carga `src/styles/global.css`.
+- Estilos: `src/styles/global.css` cubre tipografía y grid simple; `src/styles/migrated.css` conserva una propuesta de estilo avanzada para futuras iteraciones.
+- Assets estáticos: `public/` solo incluye `favicon.ico` y `favicon.svg`.
+- Build base verificado con `npm run build` antes de la limpieza estructural (éxito).
+
+## 10. Plan de cambio en curso: Optimización estructural
+
+- Limpiar la raíz eliminando descargas y artefactos no relacionados con Astro (completado).
+- Añadir exclusiones a `.gitignore` para artefactos generados (`dist`, `.astro`) (completado).
+- Actualizar README/blueprint para reflejar la estructura real y el alcance de la limpieza (completado).
+- Ejecutar `npm run build` tras la limpieza para validar que todo sigue funcionando (completado).
