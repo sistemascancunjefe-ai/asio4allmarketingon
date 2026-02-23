@@ -83,4 +83,8 @@ La migración se dividirá en 3 sprints principales:
 
 ## 8. Plan y Pasos para la Solicitud Actual
 
-La solicitud actual es la creación de este `blueprint.md` para iniciar la planificación de la migración. Los pasos futuros se centrarán en la ejecución del roadmap descrito en la Sección 4.
+La solicitud actual es verificar cada commit, avance, archivo y fragmento realizado. Para cumplirla se seguirá este flujo mínimo:
+
+1. Revisar el historial reciente y los artefactos generados para confirmar que el build (`npm run build`) y los assets siguen siendo válidos.
+2. Documentar en este blueprint los archivos y fragmentos tocados por cada entrega y los checks aplicados (build/QA manual).
+3. Mantener el checklist de verificación por cambio en curso y actualizarlo en cada commit futuro.
