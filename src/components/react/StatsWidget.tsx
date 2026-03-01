@@ -20,19 +20,29 @@ export function StatsWidget() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch('/api/stats')
+    const controller = new AbortController();
+    let cancelled = false;
+
+    fetch('/api/stats', { signal: controller.signal })
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return res.json() as Promise<Stats>;
       })
       .then((data) => {
+        if (cancelled) return;
         setStats(data);
         setLoading(false);
       })
       .catch((err: Error) => {
+        if (cancelled || err.name === 'AbortError') return;
         setError(err.message);
         setLoading(false);
       });
+
+    return () => {
+      cancelled = true;
+      controller.abort();
+    };
   }, []);
 
   if (loading) {
