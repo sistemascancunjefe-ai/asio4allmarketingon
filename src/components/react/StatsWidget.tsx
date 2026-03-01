@@ -61,16 +61,16 @@ export function StatsWidget() {
   ];
 
   return (
-    <section className="stats-section">
-      <h2 className="stats-title">Estadísticas de Campaña</h2>
-      <div className="stats-grid">
+    <section className="stats-section" aria-labelledby="stats-heading">
+      <h2 id="stats-heading" className="stats-title">Estadísticas de Campaña</h2>
+      <dl className="stats-grid">
         {cards.map(({ label, value }) => (
           <div key={label} className="stat-card">
-            <span className="stat-label">{label}</span>
-            <span className="stat-value">{value}</span>
+            <dt className="stat-label">{label}</dt>
+            <dd className="stat-value">{value}</dd>
           </div>
         ))}
-      </div>
+      </dl>
       <p className="stats-updated">
         Actualizado: {new Date(stats.updatedAt).toLocaleString('es-MX')}
       </p>
