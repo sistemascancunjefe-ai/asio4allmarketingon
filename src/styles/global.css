@@ -19,3 +19,56 @@ body {
 .counter-message {
 	text-align: center;
 }
+
+/* ── Stats widget (back ↔ front interconnection) ── */
+.stats-section {
+	margin-top: 2.5rem;
+}
+
+.stats-title {
+	font-size: 1.4rem;
+	margin-bottom: 1rem;
+}
+
+.stats-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+	gap: 1rem;
+}
+
+.stat-card {
+	background: #1e1e2e;
+	border: 1px solid #333;
+	border-radius: 0.75rem;
+	padding: 1.25rem 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.stat-label {
+	font-size: 0.85rem;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: #aaa;
+}
+
+.stat-value {
+	font-size: 2rem;
+	font-weight: 700;
+	color: #ff5722;
+}
+
+.stats-updated {
+	margin-top: 1rem;
+	font-size: 0.8rem;
+	color: #aaa;
+}
+
+.stats-loading,
+.stats-error {
+	font-style: italic;
+	color: #aaa;
+}

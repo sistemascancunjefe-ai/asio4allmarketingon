@@ -81,25 +81,24 @@ La migración se dividirá en 3 sprints principales:
 
 ---
 
-## 8. Plan y Pasos para la Solicitud Actual
+## 8. Plan y Pasos para la Solicitud Actual: Interconectar Nodos Back y Front
 
-La solicitud actual es verificar cada commit, avance, archivo y fragmento realizado. Para cumplirla se seguirá este flujo mínimo:
+### Objetivo
 
-1. Revisar el historial reciente y los artefactos generados para confirmar que el build (`npm run build`) y los assets siguen siendo válidos.
-2. Documentar en este blueprint los archivos y fragmentos tocados por cada entrega y los checks aplicados (build/QA manual).
-3. Mantener el checklist de verificación por cambio en curso y actualizarlo en cada commit futuro.
+Conectar un **nodo back-end** (endpoint de API) con un **nodo front-end** (isla React interactiva) dentro de la arquitectura de Astro.
 
-## 9. Estado actual del proyecto Astro
+### Archivos Creados / Modificados
 
-- Páginas: `src/pages/index.astro` usa `Layout` para un placeholder de inicio.
-- Layout: `src/layouts/Layout.astro` define navegación básica, pie y carga `src/styles/global.css`.
-- Estilos: `src/styles/global.css` cubre tipografía y grid simple; `src/styles/migrated.css` conserva una propuesta de estilo avanzada para futuras iteraciones.
-- Assets estáticos: `public/` solo incluye `favicon.ico` y `favicon.svg`.
-- Build base verificado con `npm run build` antes de la limpieza estructural (éxito).
+| Archivo | Rol |
+| :--- | :--- |
+| `src/pages/api/stats.ts` | **Nodo back-end**: API Route de Astro que devuelve estadísticas de campaña en JSON. |
+| `src/components/react/StatsWidget.tsx` | **Nodo front-end**: Isla React con `client:load` que hace `fetch('/api/stats')` y renderiza los datos. |
+| `src/pages/index.astro` | Monta el `StatsWidget` con `client:load` para hidratar la isla en el cliente. |
+| `src/styles/global.css` | Añade estilos para la cuadrícula de estadísticas (`.stats-grid`, `.stat-card`, etc.). |
+| `blueprint.md` | Actualizado con este plan. |
 
-## 10. Plan de cambio en curso: Optimización estructural
+### Pasos de Verificación
 
-- Limpiar la raíz eliminando descargas y artefactos no relacionados con Astro (completado).
-- Añadir exclusiones a `.gitignore` para artefactos generados (`dist`, `.astro`) (completado).
-- Actualizar README/blueprint para reflejar la estructura real y el alcance de la limpieza (completado).
-- Ejecutar `npm run build` tras la limpieza para validar que todo sigue funcionando (completado).
+1. `npm run build` sin errores.
+2. Vista previa en navegador: el panel muestra 4 tarjetas con datos (Visitas, Leads, Conversiones, Ingresos).
+3. DevTools → Network: solicitud `GET /api/stats` retorna `200 OK` con JSON válido.
